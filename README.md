@@ -9,6 +9,15 @@
 ```
 
 ### Использование:
+
+```php
+    use Keasy9\HitStatistics\Http\Middleware\CollectHit;
+
+    Route::middleware(CollectHit::class)->group(function () {
+        //...
+    });
+```
+
 ```php
     use Keasy9\HitStatistics\Repositories\HitRepository;
     use Keasy9\HitStatistics\Dto\OrchidAggregationDto;
