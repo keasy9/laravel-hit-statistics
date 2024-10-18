@@ -152,7 +152,9 @@ class HitRepository
                     return $result;
                 });
 
-            $data = $archives->merge($data);
+            if ($archives->isNotEmpty()) {
+                $data = $archives->merge($data);
+            }
         }
 
         return new $dtoClass(
