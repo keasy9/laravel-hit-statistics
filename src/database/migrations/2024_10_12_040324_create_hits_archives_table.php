@@ -14,8 +14,8 @@ return new class extends Migration
     {
         Schema::create('hits_archives', function (Blueprint $table) {
             $table->id();
-            $table->timestamp('period_start');
-            $table->timestamp('period_end');
+            $table->timestamp('period_start')->nullable();
+            $table->timestamp('period_end')->nullable();
             $table->json('aggregations');
             $table->integer('count');
         });
