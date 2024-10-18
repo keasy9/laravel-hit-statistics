@@ -1,0 +1,32 @@
+{
+    "name": "keasy9/laravel-hit-statistics",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Keasy9\\HitStatistics\\": "src/",
+            "Keasy9\\HitStatistics\\Database\\Factories\\": "src/database/factories"
+        }
+    },
+    "authors": [
+        {
+            "name": "keasy9",
+            "email": "keasy9@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.0",
+        "laravel/framework": ">=8.0",
+        "eseath/sypexgeo": "^2.3",
+        "jaybizzle/laravel-crawler-detect": "^1.3",
+        "fakerphp/faker": "^1.23"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+              "HitStatisticsServiceProvider"
+            ]
+        }
+    }
+}
