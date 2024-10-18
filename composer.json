@@ -25,7 +25,7 @@
     "extra": {
         "laravel": {
             "providers": [
-              "Keasy9\\HitStatistics\\HitStatisticsServiceProvider"
+              "Keasy9\\HitStatistics\\Providers\\HitStatisticsServiceProvider"
             ]
         }
     }
