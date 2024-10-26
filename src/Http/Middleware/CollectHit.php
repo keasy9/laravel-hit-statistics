@@ -25,6 +25,14 @@ class CollectHit
             && !Str::contains($referer, config('app.url'))
             && (config('hits.authorized') || !Auth::check())
         ) {
+            $exclude = config('hits.exclude');
+            if (
+                (isset($exclude['referer']) && preg_match($exclude['referer'], $referer))
+                || (isset($exclude['useragent']) && preg_match($exclude['useragent'], $request->header('User-Agent')))
+            ) {
+                return $next($request);
+            }
+
             HitRepository::addFromRequest($request);
         }
 
